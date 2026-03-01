@@ -20,6 +20,50 @@ This tool is built using Pillow and provides a simple graphical interface for se
 * ⚡ Fast and lightweight
 
 ---
+## 🎛 Customization (Adjust Editing Strength)
+
+You can easily customize how the images are enhanced by modifying the values inside the code.
+
+Open the file `editor.py` and locate this section:
+
+```python
+edit = ImageEnhance.Brightness(edit).enhance(0.8)
+edit = ImageEnhance.Contrast(edit).enhance(1.19)
+edit = ImageEnhance.Color(edit).enhance(1.34)
+edit = ImageEnhance.Sharpness(edit).enhance(2)
+```
+
+### 🔧 What each value means
+
+| Parameter  | Effect                                   |
+| ---------- | ---------------------------------------- |
+| Brightness | < 1 = darker, > 1 = brighter             |
+| Contrast   | < 1 = less contrast, > 1 = more contrast |
+| Color      | < 1 = less color, > 1 = more vibrant     |
+| Sharpness  | < 1 = softer, > 1 = sharper              |
+
+---
+
+### ✏ Example Custom Settings
+
+If you want brighter and sharper images, you can change to:
+
+```python
+edit = ImageEnhance.Brightness(edit).enhance(1.2)
+edit = ImageEnhance.Contrast(edit).enhance(1.3)
+edit = ImageEnhance.Color(edit).enhance(1.5)
+edit = ImageEnhance.Sharpness(edit).enhance(2.5)
+```
+
+---
+
+### 💡 Tip
+
+* Start with small changes (0.1–0.3 increments)
+* Very high values may reduce image quality
+
+This makes the tool flexible for different types of images.
+
 
 ## 📸 Example
 
