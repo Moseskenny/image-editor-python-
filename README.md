@@ -20,49 +20,43 @@ This tool is built using Pillow and provides a simple graphical interface for se
 * ⚡ Fast and lightweight
 
 ---
-## 🎛 Customization (Adjust Editing Strength)
+## 🎛 Adjustable Image Controls (GUI Sliders)
 
-You can easily customize how the images are enhanced by modifying the values inside the code.
+This application now includes **interactive sliders** that let you control how your images are enhanced before processing.
 
-Open the file `editor.py` and locate this section:
+### 🎚 Available Controls
 
-```python
-edit = ImageEnhance.Brightness(edit).enhance(0.8)
-edit = ImageEnhance.Contrast(edit).enhance(1.19)
-edit = ImageEnhance.Color(edit).enhance(1.34)
-edit = ImageEnhance.Sharpness(edit).enhance(2)
-```
-
-### 🔧 What each value means
-
-| Parameter  | Effect                                   |
-| ---------- | ---------------------------------------- |
-| Brightness | < 1 = darker, > 1 = brighter             |
-| Contrast   | < 1 = less contrast, > 1 = more contrast |
-| Color      | < 1 = less color, > 1 = more vibrant     |
-| Sharpness  | < 1 = softer, > 1 = sharper              |
+| Slider     | Effect                        |
+| ---------- | ----------------------------- |
+| Brightness | Adjust light/dark levels      |
+| Contrast   | Increase or decrease contrast |
+| Color      | Control color intensity       |
+| Sharpness  | Adjust image clarity          |
 
 ---
 
-### ✏ Example Custom Settings
+### 🔧 How to Use
 
-If you want brighter and sharper images, you can change to:
-
-```python
-edit = ImageEnhance.Brightness(edit).enhance(1.2)
-edit = ImageEnhance.Contrast(edit).enhance(1.3)
-edit = ImageEnhance.Color(edit).enhance(1.5)
-edit = ImageEnhance.Sharpness(edit).enhance(2.5)
-```
+1. Run the application
+2. Adjust the sliders to your desired values
+3. Click **"Select Folders & Process Images"**
+4. Choose input and output folders
+5. Images will be processed using your selected settings
 
 ---
 
-### 💡 Tip
+### 💡 Recommended Values
 
-* Start with small changes (0.1–0.3 increments)
-* Very high values may reduce image quality
+| Effect     | Suggested Range |
+| ---------- | --------------- |
+| Brightness | 0.7 – 1.3       |
+| Contrast   | 1.0 – 1.5       |
+| Color      | 1.0 – 1.5       |
+| Sharpness  | 1.5 – 2.5       |
 
-This makes the tool flexible for different types of images.
+---
+
+This makes the tool flexible and allows you to fine-tune image output visually.
 
 
 ## 📸 Example
