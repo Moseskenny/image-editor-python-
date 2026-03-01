@@ -7,7 +7,7 @@ SUPPORTED_EXTENSIONS = (".jpg", ".jpeg", ".png", ".bmp", ".tiff")
 
 def enhance_image(input_path, output_path, brightness, contrast, color, sharpness):
 try:
-img = Image.open(input_path)
+    img = Image.open(input_path)
 
 ```
     edit = img
@@ -105,3 +105,4 @@ start_btn.grid(row=4, column=0, columnspan=3, pady=20, sticky="ew")
 main.columnconfigure(1, weight=1)
 
 root.mainloop()
+
